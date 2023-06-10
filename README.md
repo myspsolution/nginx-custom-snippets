@@ -1,11 +1,10 @@
-# nginx-custom-snippets
+# nginx custom snippets
 Collections of nginx custom snippets to be included in (sub)domain nginx conf files
 
+## Usage:
 Copy/extract files to:
 
 **/etc/nginx/snippets**
-
-## Usage:
 
 Put it under `server { ... }` block in nginx conf file,
 
