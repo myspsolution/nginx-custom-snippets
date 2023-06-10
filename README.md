@@ -1,12 +1,18 @@
 # nginx custom snippets
+
 Collections of nginx custom snippets to be included in (sub)domain nginx conf files
 
 ## Usage:
+
+Create dir:
+
+`[sudo] mkdir /etc/nginx/snippets/sps`
+
 Copy/extract files to:
 
-**/etc/nginx/snippets**
+**/etc/nginx/snippets/sps**
 
-Put it under `server { ... }` block in nginx conf file,
+Put it within `server { ... }` block in nginx conf file,
 
 examples:
 
@@ -15,13 +21,14 @@ server {
   # ...your initial nginx conf
 
   # add protection from nginx common security problem
-  include /etc/nginx/snippets/security.common.conf;
+  include /etc/nginx/snippets/sps/security.common.conf;
 
   # handle patch traversal security
-  include /etc/nginx/snippets/security.path-traversal.conf;
+  include /etc/nginx/snippets/sps/security.path-traversal.conf;
 
   # custom error pages
-  include /etc/nginx/snippets/custom-error-pages.conf;
+  # must also include: https://github.com/myspsolution/nginx-custom-error-pages
+  include /etc/nginx/snippets/sps/custom-error-pages.conf;
 
   # ...your rest nginx conf
 }
