@@ -2,17 +2,16 @@
 
 Collections of nginx custom snippets to be included in (sub)domain nginx conf files
 
-## Usage:
+## Copy/Installation
 
-Create dir:
+Clone this repo to: **/etc/nginx/snippets/sps** :
 
-`[sudo] mkdir /etc/nginx/snippets/sps`
+```
+sudo git clone https://github.com/myspsolution/nginx-custom-snippets.git /etc/nginx/snippets/sps
 
-Copy/extract files to:
+```
 
-**/etc/nginx/snippets/sps**
-
-Put it within `server { ... }` block in nginx conf file,
+Put within `server { ... }` block in nginx conf file,
 
 examples:
 
